@@ -2,4 +2,6 @@
 members = [
     "test1",
     "hello",
+    "tokio-chat",
+    "tokio-client",
 ]
