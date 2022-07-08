@@ -40,6 +40,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "http"
+version = "0.1.0"
+
+[[package]]
+name = "httpserver"
+version = "0.1.0"
+
+[[package]]
 name = "libc"
 version = "0.2.126"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -195,6 +203,14 @@ dependencies = [
  "quote",
  "unicode-ident",
 ]
+
+[[package]]
+name = "tcpclient"
+version = "0.1.0"
+
+[[package]]
+name = "tcpserver"
+version = "0.1.0"
 
 [[package]]
 name = "test1"

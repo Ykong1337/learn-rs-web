@@ -1,8 +1,8 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
+use std::mem;
+
+#[test]
+fn a() {
+    let a;
+    let a = a = true;
+    print!("{}", mem::size_of_val(&a));
 }

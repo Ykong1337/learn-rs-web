@@ -4,4 +4,8 @@ members = [
     "hello",
     "tokio-chat",
     "tokio-client",
+    "tcpserver",
+    "tcpclient",
+    "httpserver",
+    "http",
 ]

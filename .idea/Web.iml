@@ -8,6 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/hello/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tokio-chat/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tokio-client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/http/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/httpserver/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tcpclient/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tcpserver/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
