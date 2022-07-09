@@ -55,7 +55,7 @@ impl Handler for StaticPageHandler {
                     HttpResponse::new("200", Some(map), Some(contents))
                 }
                 None => HttpResponse::new("404", None, Self::load_file("404.html")),
-            },
+            }
         }
     }
 }
