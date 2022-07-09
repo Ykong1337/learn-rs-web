@@ -34,7 +34,7 @@ impl From<&str> for Version {
 }
 
 #[derive(Debug, PartialEq)]
-pub enum Response {
+pub enum Resource {
     Path(String),
 }
 
@@ -42,7 +42,7 @@ pub enum Response {
 pub struct HttpRequest {
     pub method: Method,
     pub version: Version,
-    pub resource: Response,
+    pub resource: Resource,
     pub headers: HashMap<String, String>,
     pub msg_body: String,
 }
@@ -51,7 +51,7 @@ impl From<String> for HttpRequest {
     fn from(req: String) -> Self {
         let mut parsed_method = Method::Uninitialized;
         let mut parsed_version = Version::V1_1;
-        let mut parsed_resource = Response::Path("".to_string());
+        let mut parsed_resource = Resource::Path("".to_string());
         let mut parsed_headers = HashMap::new();
         let mut parsed_msg_body = "";
 
@@ -78,13 +78,13 @@ impl From<String> for HttpRequest {
     }
 }
 
-fn process_req_line(s: &str) -> (Method, Response, Version) {
+fn process_req_line(s: &str) -> (Method, Resource, Version) {
     let mut words = s.split_whitespace();
     let method = words.next().unwrap();
     let resource = words.next().unwrap();
     let version = words.next().unwrap();
 
-    (method.into(), Response::Path(resource.to_string()), version.into())
+    (method.into(), Resource::Path(resource.to_string()), version.into())
 }
 
 fn process_header_line(s: &str) -> (String, String) {
